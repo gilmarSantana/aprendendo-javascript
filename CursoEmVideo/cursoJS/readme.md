@@ -72,3 +72,18 @@ Ordem de precedencia dos operadores
 **,
 *, /, %, 
 +, -
+
+=========================================================================================
+
+Podemos selecionar elementos do DOM das seguintes formas:
+    - por marca/tagname
+        getElementsByTagName('tagname')[];
+    - por ID
+        getElementById('id');
+    - por nome
+        getElementsByName('name')[];
+    - por classe
+        getElementsByClassName('className')[];
+    - por seletor
+        querySelector('div#id'),
+        querySelectorall()
