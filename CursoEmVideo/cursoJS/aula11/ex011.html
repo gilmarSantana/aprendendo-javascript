@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de cidadania</title>
+</head>
+<body>
+    <h1>Controle de Cidadania</h1>
+
+    <label for="pais_residencia">Em qual país vive?</label>
+    <input type="text" name="pais_residencia" id="pais_residencia" autofocus placeholder="Em qual país vive?">
+    <input type="button" value="Verificar Cidadania" onclick="verificar_cidadania();">
+    <div id="resultado" style="margin-top:30px;"></div>
+
+    <script>
+        function verificar_cidadania() {
+            var input_pais_residencia = window.document.querySelector("input#pais_residencia");
+            var div_resultado = window.document.querySelector("div#resultado");
+            var pais_residencia = input_pais_residencia.value.toLowerCase();
+
+
+            div_resultado.innerHTML = `<p><strong>Você reside no ${pais_residencia}</strong></p>`;
+            if (pais_residencia == "brasil") {
+                div_resultado.innerHTML += `<p>Você é brasileiro</p>`;
+            }else{
+                div_resultado.innerHTML += `Você é estrangeiro`;
+            }
+
+        }
+    </script>
+</body>
+</html>

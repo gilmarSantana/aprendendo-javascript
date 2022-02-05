@@ -87,3 +87,6 @@ Podemos selecionar elementos do DOM das seguintes formas:
     - por seletor
         querySelector('div#id'),
         querySelectorall()
+
+=========================================================================================
+
