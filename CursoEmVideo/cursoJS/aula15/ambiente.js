@@ -23,8 +23,5 @@ console.log(num.indexOf(654));
 console.log(num[num.indexOf(654)]);
 
 
-
-
-
 console.log(`The first value of vetor is ${num[0]}`);
 console.log(``);
