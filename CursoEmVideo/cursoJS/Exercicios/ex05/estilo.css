@@ -1,0 +1,31 @@
+body {
+    background: #83c942c2;
+    font: normal 15pt Arial;
+    color: #da9500;
+}
+
+header {
+    color: crimson;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 15px crimson;
+}
+
+input.btn_gerar_tabuada {
+    background-color: crimson;
+    color: white;
+    font-weight: bolder;
+}
+
+footer {
+    color: crimson;
+    text-align: center;
+    font-style: italic;
+}
