@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLICK</title>
+</head>
+
+<body>
+    <button id="um">Testando o click1</button>
+    <button id="dois">Testando o click2</button>
+    <button id="tres">Testando o click3</button>
+    <button id="quatro">Testando o click4</button>
+    <button id="cinco">Testando o click5</button>
+    <button id="seis">Testando o click6</button>
+    <button id="sete">Testando o click7</button>
+    <button id="oito">Testando o click8</button>
+    <button id="nove">Testando o click9</button>
+    <button id="dez">Testando o click10</button>
+    <button id="onze">Testando o click11</button>
+    <button id="doze">Testando o click12 - Não clique nese botão</button>
+    <button id="treze">Testando o click13</button>
+    <button id="quatorze">Testando o click14</button>
+    <button id="quinze">Testando o click15</button>
+    <button id="dezesseis">Testando o click16</button>
+    <button id="dezessete" class="dezessete">Testando o click17</button>
+    <button id="dezoito">Testando o click18</button>
+    <button id="dezenove">Testando o click19</button>
+    <button id="vinte">Testando o click20</button>
+
+
+    <div id="resposta">
+
+    </div>
+
+    <div class="resposta2" hidden>
+        Who is the best programmer of the world?
+    </div>
+    <script>
+        const area_de_resposta = document.querySelector('#resposta');
+        const area_de_resposta2 = document.querySelector('.resposta2');
+
+        const id_do_botao_seis = document.getElementById('seis').id;
+        const texto_entre_botao_seis = document.querySelector(`#${id_do_botao_seis}`).innerText;
+
+        const botao_1 = document.getElementById('um');
+        botao_1.addEventListener('click', function () {
+            alert('Foi clicado o botão ' + botao_1.innerText);
+        });
+
+        const botao_2 = window.document.querySelector('#dois');
+        botao_2.addEventListener('click', exibirDataAtual);
+
+        const botao_3 = document.querySelector('#tres');
+        botao_3.addEventListener('click', () => {
+            window.alert('The button 3 was clicked.');
+            console.log(botao_3);
+        })
+
+        const botao_4 = document.querySelector('#quatro');
+        botao_4.addEventListener('click', (event) => {
+            const nome_do_clicador = prompt('Digite seu nome...');
+            console.log(event);
+            console.log(nome_do_clicador)
+        });
+
+        const botao_5 = document.getElementById('cinco');
+        botao_5.addEventListener('click', function () {
+            area_de_resposta.innerText = 'Você clicou no botão número cinco.';
+        });
+
+        const botao_6 = document.querySelector(`#${id_do_botao_seis}`);
+        botao_6.addEventListener('click', () => {
+            console.log(texto_entre_botao_seis)
+        });
+
+        const botao_7 = document.querySelector('#sete');
+        botao_7.addEventListener('click', function () {
+            area_de_resposta.innerText = 'Good morning, my name is Gilmar and I am the best developer of the earth.';
+            document.body.style = "background:black; font-size:20pt; color:orange;"
+        });
+
+        const botao_8 = document.getElementById('oito');
+        botao_8.addEventListener('click', () => {
+            alert('Botão oito foi clicado e o evento listener usado foi o getElementById');
+        });
+
+        const botao_9 = document.querySelector('#nove');
+        botao_9.addEventListener('click', () => {
+            toggleFullScreen();
+        });
+
+        const botao_10 = window.document.getElementById('dez');
+        botao_10.addEventListener('click', verificar_conexao_internet);
+
+        const botao_11 = document.querySelector('#onze');
+        botao_11.addEventListener('click', () => {
+            botao_11.style = 'color:gold; font-size:18pt;';
+            botao_11.innerText = 'Indo para testar velocidade da internet';
+
+            setTimeout(() => {
+                window.open('https://www.speedtest.net/pt', '_blank');
+                botao_11.style = 'color:black; font-size:10pt;';
+                botao_11.innerText = 'Testando o click11';
+            }, 3000);
+
+        });
+
+        const botao_12 = document.getElementById('doze');
+        botao_12.addEventListener('click', () => {
+            document.body.style = 'background:brown';
+            document.body.innerHTML =
+                `
+                <h1 style="color:red; backgound:black;">Não era pra ter clicado aqui sua mula.</h1>
+                <br><br><br>
+                <img src="https://s2.glbimg.com/326fBzITmaVHOdd91J0xvFMM4RE=/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2019/y/S/CJ1VpIR0ulA1OSKqjL4g/foto18agr-101-mulas-b18.jpg" width="80%" height="620px">
+            `;
+        });
+
+        const botao_13 = document.querySelector('#treze');
+        botao_13.addEventListener('click', () => {
+            alert('Cansei, mas sem desistir, borá, botão 13 clicado')
+        })
+
+        const botao_14 = document.querySelector('#quatorze');
+        botao_14.addEventListener('click', () => {
+            document.body.style = 'background:gold; color:silver;';
+        });
+
+        const botao_15 = document.querySelector('#quinze');
+        botao_15.addEventListener('click', () => {
+            document.body.innerHTML =
+                `
+                <div style="border:3px solid red;">
+                    <h1>Renato para de ser loko kkkkkkkkkkkkk ☼♦▒</h1>
+                </div>
+            `
+        });
+
+        const botao_16 = document.querySelector('#dezesseis');
+        botao_16.addEventListener('click', () => {
+            console.log('Hey buddy');
+            alert('Hey buddy');
+        });
+
+        const botao_17 = document.querySelector('.dezessete');
+        botao_17.addEventListener('click', () => {
+            console.log('I have a dream');
+        });
+
+        const botao_18 = document.querySelector('#dezoito');
+        botao_18.addEventListener('click', () => {
+            area_de_resposta2.removeAttribute('hidden');
+            area_de_resposta2.setAttribute('title', 'Name of the best programmer of the whole world');
+
+        });
+
+        document.querySelector('#dezenove').addEventListener('click', () => { area_de_resposta.append('123456789\n') });
+
+        const botao_20 = document.querySelector('#vinte');
+        botao_20.addEventListener('click', () => {
+            area_de_resposta.append('Massachussets\n')
+        });
+
+
+
+
+
+        function verificar_conexao_internet() {
+            const statusDisplay = document.getElementById("resposta");
+            statusDisplay.textContent = navigator.onLine ? "Conectado à internet" : "Sem conexão com a internet";
+        }
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+                botao_9.innerText = 'Desativar tela cheia';
+                botao_9.style = 'font-size:20pt; color: green;';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                    botao_9.innerText = 'Ativar tela cheia';
+                    botao_9.style = 'font-size:20pt; color:red;'
+                }
+            }
+        }
+        function exibirDataAtual() {
+            const date = new Date();
+            alert(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`);
+        }
+
+    </script>
+</body>
+
+</html>
