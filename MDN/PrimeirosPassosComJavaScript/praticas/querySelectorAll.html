@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+
+<body>
+    <div id="paragrafos">
+        <p>A pesquisa foi bem sucedida às 08</p>
+        <p>A pesquisa foi bem sucedida às 09</p>
+        <p>A pesquisa foi bem sucedida às 10</p>
+        <p>A pesquisa foi bem sucedida às 11</p>
+        <p>A pesquisa foi bem sucedida às 12</p>
+        <p>A pesquisa foi bem sucedida às 13</p>
+        <p>A pesquisa foi bem sucedida às 14</p>
+        <p>A pesquisa foi bem sucedida às 15</p>
+        <p>A pesquisa foi bem sucedida às 16</p>
+        <p>A pesquisa foi bem sucedida às 17</p>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Here I select all paragraphs
+            const allParagrafos = document.querySelectorAll('p');
+
+            // Here I set an ID in each p element with a different incremented number genreted by for
+            for (let i = 0; i <= allParagrafos.length; i++) {
+                allParagrafos[i].setAttribute('id', `paragrafo-${i}`);
+
+                document.querySelector(`#paragrafo-${i}`).innerText = `Este é o parágrafo número ${i + 1}`;
+
+                allParagrafos[i].addEventListener('click', () => {
+                    alert(`Parágrafo ${i + 1} clicado`)
+                });
+
+            }
+        });
+    </script>
+</body>
+
+</html>
